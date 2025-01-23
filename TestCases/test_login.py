@@ -3,9 +3,17 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pytest
 
-@pytest.mark.smoke  # Optional marker for categorization
+@pytest.mark.smoke
 def test_login():
-    driver = webdriver.Chrome()
+    # Setting up Chrome options for headless mode
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless")  # Run in headless mode
+    options.add_argument("--disable-gpu")  # Disable GPU for better compatibility
+    options.add_argument("--no-sandbox")  # Required for running in certain environments like Jenkins
+    options.add_argument("--disable-dev-shm-usage")  # Overcomes limited resource issues
+
+    driver = webdriver.Chrome(options=options)  # Initialize the WebDriver with the specified options
+
     try:
         # Open the OrangeHRM login page
         driver.get("https://opensource-demo.orangehrmlive.com/")
