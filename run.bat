@@ -1,0 +1,1 @@
+pytest -vs E:\BEBO-Tech\GIT\TestCases

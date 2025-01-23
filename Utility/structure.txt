@@ -1,0 +1,45 @@
+Framework_OrangeHRM/
+│
+├── .pytest_cache/
+├── configuration/
+│   └── config.ini
+├── logs/
+│   ├── automation.log
+│   └── logfile.log
+├── PageObject/
+│   ├── __init__.py
+│   ├── LoginPage.py
+│   ├── DashboardPage.py
+│   ├── EmployeePage.py
+│   └── LeavePage.py
+├── Reports/
+├── Screenshot/
+├── TestCases/
+│   ├── test_login.py
+│   ├── test_add_employee.py
+│   ├── test_apply_leave.py
+│   └── test_dashboard_navigation.py
+├── TestData/
+│   └── OrangeHRM_TestData.xlsx
+├── utility/
+│   ├── __init__.py
+│   ├── customLogger.py
+│   ├── randomString.py
+│   ├── readProperties.py
+│   ├── XlUtils.py
+├── venv/
+│   └── (Python virtual environment files)
+└── install_packages.bat
+
+
+
+
+
+
+mkdir -p Framework_OrangeHRM/{configuration,logs,PageObject,Reports,Screenshot,TestCases,TestData,utility,venv} && \
+touch Framework_OrangeHRM/configuration/config.ini && \
+touch Framework_OrangeHRM/logs/{automation.log,logfile.log} && \
+touch Framework_OrangeHRM/PageObject/{__init__.py,LoginPage.py,DashboardPage.py,EmployeePage.py,LeavePage.py} && \
+touch Framework_OrangeHRM/TestCases/{test_login.py,test_add_employee.py,test_apply_leave.py,test_dashboard_navigation.py} && \
+touch Framework_OrangeHRM/TestData/OrangeHRM_TestData.xlsx && \
+touch Framework_OrangeHRM/utility/{__init__.py,customLogger.py,randomString.py,readProperties.py,XlUtils.py}
